@@ -93,7 +93,7 @@ const Introduction = () => {
                 animate={{ opacity: 1 }}
                 transition={{ ease: "easeInOut", duration: 1 }}
               >
-                Hello, I'm Joshua Lopez!
+                <span className='intro-phrase'>Hello, I'm </span> Joshua Lopez<span className='intro-phrase'>!</span>
               </motion.h1>
               <p className="intro-text">
                 {renderText()}
