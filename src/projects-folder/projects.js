@@ -5,36 +5,32 @@ import newPic from './2.png';
 import newPic1 from './6.png';
 import newPic2 from './7.png';
 
-
 const projects = [
     {
         "id": 1,
         "title": "Divine Messenger",
         "description": "Developed a digital solution for a funeral home to streamline operations using a user-centric interface and database architecture implemented in Flutter, while meticulously managing project timelines to maintain high quality standards.",
         "technologies": "Flutter, Dart, Javascript, Firebase, HTML",
-        "imageUrl": newPic
+        "imageUrl": newPic,
+        "link": "#"
     },
     {
         "id": 2,
         "title": "Movie Recommendation Website",
         "description": "Created a visually captivating movie recommendation app with a neon-themed interface. Features include real-time search, genre-based discovery, and a responsive design, utilizing TMDB API for fetching real-time data.",
         "technologies": "HTML, TypeScript, Bootstrap, CSS, SvelteKit",
-        "imageUrl": newPic1
+        "imageUrl": newPic1,
+        "link": "https://github.com/Joshua11l/movie-rec"
     },
     {
         "id": 3,
         "title": "My Portfolio",
         "description": "Engineered an interactive portfolio using JSX and React. Enhanced the interface with Bootstrap, CSS, and Framer Motion for dynamic animations and responsive layouts, integrating React Awesome Icons for added aesthetic appeal.",
         "technologies": "JSX, HTML, React, Bootstrap, CSS, Framer Motion",
-        "imageUrl": newPic2
+        "imageUrl": newPic2,
+        "link": "https://github.com/Joshua11l/my-portfolio"
     }
-    
-    
 ];
-
-
-    
-
 
 const Projects = () => {
     return (
@@ -43,7 +39,7 @@ const Projects = () => {
             <Carousel>
                 {projects.map(project => (
                     <Carousel.Item key={project.id} className="project-carousel-item">
-                        <Card className="project-card">
+                        <Card className="project-card" onClick={() => window.location.href = project.link}>
                             <Card.Img variant="top" src={project.imageUrl} />
                             <Card.Body>
                                 <Card.Title className="project-card-title">{project.title}</Card.Title>

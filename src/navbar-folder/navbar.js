@@ -12,7 +12,7 @@ const NavBar = () => {
     const [navBackground, setNavBackground] = useState(false);
 
     const changeBackground = () => {
-        if (window.scrollY >= 80) {
+        if (window.scrollY >= 80 && window.innerWidth > 992) {
             setNavBackground(true);
         } else {
             setNavBackground(false);
@@ -44,7 +44,7 @@ const NavBar = () => {
                     alt="Your Logo"
                 />
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" className="custom-toggler" />
             <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                 <Nav>
                     <Nav.Link href="#about"><FontAwesomeIcon icon={faUser} /> About</Nav.Link>

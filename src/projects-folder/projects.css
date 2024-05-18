@@ -3,6 +3,11 @@ margin-bottom: 20rem !important;
 }
 
 .project-card {
+    cursor: pointer;
+}
+
+
+.project-card {
     width: 45% !important; /* Adjust the width as needed */
     margin: auto; /* Centers the card in the carousel item */
 }
